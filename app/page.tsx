@@ -1,8 +1,14 @@
 import Hero from "@/components/Hero";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "opdine - The Restaurant Operating System | Orders, Tables, Kitchen & Billing",
+  description: "opdine is the complete restaurant operating system. Manage orders, tables, kitchen, billing and growth — all connected in one place. Streamline your restaurant operations today.",
+};
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <>
       <Hero />
       
       {/* Placeholder sections below hero */}
@@ -16,6 +22,6 @@ export default function Home() {
           </p>
         </div>
       </section>
-    </div>
+    </>
   );
 }

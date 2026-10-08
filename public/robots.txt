@@ -1,0 +1,14 @@
+# robots.txt for opdine.vercel.app
+
+User-agent: *
+Allow: /
+
+# Disallow admin or private sections if any
+# Disallow: /admin/
+# Disallow: /api/
+
+# Sitemap location
+Sitemap: https://opdine.vercel.app/sitemap.xml
+
+# Crawl-delay (optional, for rate limiting)
+# Crawl-delay: 1
