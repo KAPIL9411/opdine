@@ -1,0 +1,7 @@
+<svg width="140" height="40" viewBox="0 0 140 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Leaf accent -->
+  <path d="M15 8C15 8 18 5 22 8C22 8 20 12 15 15V8Z" fill="white"/>
+  
+  <!-- Text: opdine -->
+  <text x="10" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="700" fill="white" letter-spacing="0">opdine</text>
+</svg>
