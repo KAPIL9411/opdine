@@ -60,17 +60,14 @@ export default function Hero() {
 
         {/* Desktop Navigation */}
         <nav className="hidden items-center gap-8 lg:flex">
-          <a href="#product" className="text-sm font-medium text-white/90 transition-colors hover:text-white">
-            Product
+          <a href="#how-it-works" className="text-sm font-medium text-white/90 transition-colors hover:text-white">
+            How It Works
           </a>
-          <a href="#solutions" className="text-sm font-medium text-white/90 transition-colors hover:text-white">
-            Solutions
+          <a href="#features" className="text-sm font-medium text-white/90 transition-colors hover:text-white">
+            Features
           </a>
           <a href="#restaurants" className="text-sm font-medium text-white/90 transition-colors hover:text-white">
             For Restaurants
-          </a>
-          <a href="#resources" className="text-sm font-medium text-white/90 transition-colors hover:text-white">
-            Resources
           </a>
         </nav>
 
@@ -80,7 +77,7 @@ export default function Hero() {
             Log in
           </button>
           <button className="rounded-full bg-red-600 px-6 py-2.5 text-sm font-semibold text-white transition-all hover:bg-red-700">
-            Get Started
+            Get Early Access
           </button>
         </div>
       </header>
@@ -109,18 +106,18 @@ export default function Hero() {
 
           {/* Description */}
           <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-white md:text-xl md:leading-relaxed">
-            Orders, tables, kitchen, billing and growth —<br className="hidden md:block" />
-            all connected in one place.
+            QR ordering, tables, kitchen, billing and insights —<br className="hidden md:block" />
+            built together for modern restaurants.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <button className="w-full rounded-full bg-red-600 px-9 py-4 text-base font-semibold text-white shadow-lg transition-all hover:scale-105 hover:bg-red-700 hover:shadow-xl sm:w-auto">
-              Get Started
+              Get Early Access
             </button>
-            <button className="w-full rounded-full border-2 border-white bg-transparent px-9 py-4 text-base font-semibold text-white transition-all hover:bg-white/10 sm:w-auto">
-              See how it works
-            </button>
+            <a href="#how-it-works" className="w-full rounded-full border-2 border-white bg-transparent px-9 py-4 text-base font-semibold text-white text-center transition-all hover:bg-white/10 sm:w-auto">
+              See How It Works →
+            </a>
           </div>
         </div>
       </main>

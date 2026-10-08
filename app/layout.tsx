@@ -79,9 +79,8 @@ export default function RootLayout({
         <link rel="preload" href="/images/logo.png" as="image" />
         
         {/* Favicon */}
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/images/logo.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/images/logo.png" />
+        <link rel="icon" href="/images/favicon.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/images/favicon.png" />
         
         {/* Additional SEO Meta Tags */}
         <meta name="application-name" content="opdine" />
