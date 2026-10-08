@@ -6,14 +6,6 @@ import { ChevronDown } from 'lucide-react';
 export default function Hero() {
   const [videoReady, setVideoReady] = useState(false);
 
-  // Preload video for faster loading
-  useEffect(() => {
-    const video = document.createElement('video');
-    video.preload = 'auto';
-    video.src = '/videos/opdine-hero.webm';
-    video.load();
-  }, []);
-
   return (
     <section className="relative h-screen min-h-[720px] w-full overflow-hidden md:min-h-[700px]">
       {/* Hero Media Container */}
@@ -38,18 +30,18 @@ export default function Hero() {
           playsInline
           preload="auto"
           aria-hidden="true"
-          onLoadedData={() => setVideoReady(true)}
+          onCanPlayThrough={() => setVideoReady(true)}
           className="absolute inset-0 h-full w-full object-cover transition-opacity duration-500 ease-out"
           style={{ opacity: videoReady ? 1 : 0 }}
         >
           <source src="/videos/opdine-hero.webm" type="video/webm" />
         </video>
 
-        {/* Gradient Overlay */}
+        {/* Gradient Overlay - Darker for premium look */}
         <div 
           className="absolute inset-0 h-full w-full"
           style={{
-            background: 'linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.10) 35%, rgba(0,0,0,0.60) 100%)'
+            background: 'linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.45) 35%, rgba(0,0,0,0.65) 100%)'
           }}
         />
       </div>
@@ -87,7 +79,7 @@ export default function Hero() {
           <button className="hidden text-sm font-medium text-white/90 transition-colors hover:text-white md:block">
             Log in
           </button>
-          <button className="rounded-full bg-white px-6 py-2.5 text-sm font-semibold text-gray-900 transition-all hover:bg-white/95">
+          <button className="rounded-full bg-red-600 px-6 py-2.5 text-sm font-semibold text-white transition-all hover:bg-red-700">
             Get Started
           </button>
         </div>
@@ -95,18 +87,19 @@ export default function Hero() {
 
       {/* Hero Content */}
       <main className="relative z-10 flex h-full items-center justify-center px-5 pb-20 pt-10">
-        <div className="mx-auto max-w-4xl text-center">
+        <div className="mx-auto max-w-5xl text-center">
           {/* Eyebrow */}
-          <p className="mb-4 text-xs font-bold uppercase tracking-widest text-white/80 md:text-sm">
+          <p className="mb-6 text-sm font-bold uppercase tracking-[0.2em] text-white md:text-base">
             The Restaurant Operating System
           </p>
 
           {/* Headline */}
           <h1 
-            className="mb-6 font-extrabold leading-[0.95] tracking-tight text-white"
+            className="mb-7 font-extrabold leading-[0.95] tracking-tight text-white"
             style={{ 
-              fontSize: 'clamp(44px, 6vw, 88px)',
-              letterSpacing: '-0.02em'
+              fontSize: 'clamp(48px, 7vw, 96px)',
+              letterSpacing: '-0.025em',
+              textShadow: '0 2px 20px rgba(0,0,0,0.3)'
             }}
           >
             Run your restaurant.
@@ -115,17 +108,17 @@ export default function Hero() {
           </h1>
 
           {/* Description */}
-          <p className="mx-auto mb-8 max-w-2xl text-base leading-relaxed text-white/95 md:text-lg md:leading-relaxed">
+          <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-white md:text-xl md:leading-relaxed">
             Orders, tables, kitchen, billing and growth —<br className="hidden md:block" />
             all connected in one place.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <button className="w-full rounded-full bg-white px-8 py-3.5 text-base font-semibold text-gray-900 transition-all hover:bg-white/95 sm:w-auto">
+            <button className="w-full rounded-full bg-red-600 px-9 py-4 text-base font-semibold text-white shadow-lg transition-all hover:scale-105 hover:bg-red-700 hover:shadow-xl sm:w-auto">
               Get Started
             </button>
-            <button className="w-full rounded-full border-2 border-white/90 bg-transparent px-8 py-3.5 text-base font-semibold text-white transition-all hover:bg-white/10 sm:w-auto">
+            <button className="w-full rounded-full border-2 border-white bg-transparent px-9 py-4 text-base font-semibold text-white transition-all hover:bg-white/10 sm:w-auto">
               See how it works
             </button>
           </div>
@@ -133,12 +126,12 @@ export default function Hero() {
       </main>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2">
-        <p className="text-xs font-medium uppercase tracking-wider text-white/70">
+      <div className="absolute bottom-10 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-3">
+        <p className="text-xs font-semibold uppercase tracking-[0.15em] text-white/80">
           Scroll down
         </p>
         <ChevronDown 
-          className="h-5 w-5 text-white/70 animate-bounce" 
+          className="h-5 w-5 text-white/80 animate-bounce" 
           style={{ 
             animation: 'bounce 2s ease-in-out infinite',
             animationDuration: '2.5s'
